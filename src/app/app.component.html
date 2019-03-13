@@ -10,7 +10,7 @@
       <app-list-item
         *ngFor="let list of lists"
         [newList]="list"
-        [selectedListId]="selectedList"
+        [selectedListId]="selectedListId"
         (OnGetSelectedListId)="selectList($event)"
         (OnDeleteList)="deleteList($event)"></app-list-item>
     </div>
@@ -20,17 +20,17 @@
     <!-- Add task component -->
     <app-add-to-list (OnAddToList)="addItemToTasks($event)"></app-add-to-list>
     <div class="tasks">
-      <app-task-item *ngFor="let task of tasks" [newTask]="task"></app-task-item>
+      <app-task-item *ngFor="let task of tasksFromSelectedList" [newTask]="task"></app-task-item>
     </div>
   </div>
 </main>
 
 
 <b>Tasks</b>
-<p *ngFor="let task of tasks">{{ task }}</p>
+<p *ngFor="let task of tasks">{{ task.name }}</p>
 <br>
 <b>Lists</b>
-<p *ngFor="let list of lists">{{ list }}</p>
+<p *ngFor="let list of lists">{{ list.name }}</p>
 
 
 <router-outlet></router-outlet>

@@ -38,8 +38,10 @@ export class AppComponent {
       name: 'List 3'
     }
   ];
+  tasksFromSelectedList: Array<any> = [];
 
-  selectedList: any = this.tasks[0];
+  // selectedList: any;
+  selectedListId: any;
 
   addItemToTasks(task) {
     this.tasks.push(task);
@@ -50,11 +52,17 @@ export class AppComponent {
   }
 
   selectList(list) {
-    this.selectedList = list;
+    // this.selectedList = list;
+    this.selectedListId = list.id;
+    this.tasksFromSelectedList = this.tasks.filter(task => task.listId === list.id);
   }
 
   deleteList(listToDelete) {
     this.lists = this.lists.filter(list => list.id !== listToDelete.id);
+    this.tasks = this.tasks.filter(task => task.id !== listToDelete.id);
+    if (this.tasksFromSelectedList || listToDelete.id === this.tasksFromSelectedList[0].id) {
+      this.tasksFromSelectedList = [];
+    }
   }
 
 }
