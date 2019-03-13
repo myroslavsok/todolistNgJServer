@@ -23,7 +23,8 @@
       <app-task-item
         *ngFor="let task of tasksFromSelectedList()"
         [newTask]="task"
-        (OnEditTask)="changeTaskName($event)"></app-task-item>
+        (OnEditTask)="changeTaskName($event)"
+        (OnDeleteTask)="deleteTask($event)"></app-task-item>
     </div>
   </div>
 </main>

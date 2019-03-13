@@ -82,4 +82,9 @@ export class AppComponent {
     });
   }
 
+  deleteTask(taskId) {
+    console.log(taskId);
+    this.tasks = this.tasks.filter(task => task.id !== taskId);
+  }
+
 }
