@@ -69,9 +69,9 @@ export class AppComponent {
     this.selectedListId = list.id;
   }
 
-  deleteList(listToDelete) {
-    this.lists = this.lists.filter(list => list.id !== listToDelete.id);
-    this.tasks = this.tasks.filter(task => task.id !== listToDelete.id);
+  deleteList(targetList) {
+    this.lists = this.lists.filter(list => list.id !== targetList.id);
+    this.tasks = this.tasks.filter(task => task.id !== targetList.id);
   }
 
   markTask(targetTask) {

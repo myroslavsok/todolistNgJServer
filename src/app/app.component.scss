@@ -11,12 +11,10 @@ main {
 
 .lists__container {
   flex-grow: 1;
-  border: 1px solid green;
 }
 
 .tasks__container {
   flex-grow: 3;
-  border: 1px solid red;
 }
 
 .lists,
@@ -24,5 +22,5 @@ main {
   width: 100%;
   height: 78%;
   overflow-y: auto;
-  background-color: lightblue;
+  border: 1px solid lightgray;
 }
