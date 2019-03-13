@@ -11,17 +11,20 @@ export class AppComponent {
     {
       id: 1,
       listId: 1,
-      name: 'Task 1 list 1'
+      name: 'Task 1 list 1',
+      done: false
     },
     {
       id: 2,
       listId: 2,
-      name: 'Task 1 list 2'
+      name: 'Task 1 list 2',
+      done: false
     },
     {
       id: 3,
       listId: 3,
-      name: 'Task 1 list 3'
+      name: 'Task 1 list 3',
+      done: false
     }
   ];
   lists: Array<any> = [
