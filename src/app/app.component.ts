@@ -39,7 +39,7 @@ export class AppComponent {
     }
   ];
 
-  selectedList: any;
+  selectedList: any = this.tasks[0];
 
   addItemToTasks(task) {
     this.tasks.push(task);
