@@ -74,4 +74,12 @@ export class AppComponent {
     this.tasks = this.tasks.filter(task => task.id !== listToDelete.id);
   }
 
+  changeTaskName(targetTask) {
+    this.tasks.forEach(task => {
+      if (task.id === targetTask.id) {
+        task.name = targetTask.name;
+      }
+    });
+  }
+
 }
