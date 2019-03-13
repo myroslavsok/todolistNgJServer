@@ -53,4 +53,8 @@ export class AppComponent {
     this.selectedList = list;
   }
 
+  deleteList(listToDelete) {
+    this.lists = this.lists.filter(list => list.id !== listToDelete.id);
+  }
+
 }
