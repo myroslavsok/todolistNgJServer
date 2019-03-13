@@ -7,8 +7,37 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  tasks: Array<any> = [];
-  lists: Array<any> = [];
+  tasks: Array<any> = [
+    {
+      id: 1,
+      listId: 1,
+      name: 'Task 1 list 1'
+    },
+    {
+      id: 2,
+      listId: 2,
+      name: 'Task 1 list 2'
+    },
+    {
+      id: 3,
+      listId: 3,
+      name: 'Task 1 list 3'
+    }
+  ];
+  lists: Array<any> = [
+    {
+      id: 1,
+      name: 'List 1',
+    },
+    {
+      id: 2,
+      name: 'List 2'
+    },
+    {
+      id: 3,
+      name: 'List 3'
+    }
+  ];
 
   addItemToTasks(task) {
     this.tasks.push(task);
