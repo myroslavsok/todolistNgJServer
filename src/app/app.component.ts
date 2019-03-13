@@ -47,8 +47,11 @@ export class AppComponent {
     this.tasks.push(task);
   }
 
-  addItemToLists(list) {
-    this.lists.push(list);
+  addItemToLists(listName) {
+    this.lists.push({
+      id: this.lists.length + 1,
+      name: listName
+    });
   }
 
   selectList(list) {
