@@ -41,13 +41,17 @@ export class AppComponent {
       name: 'List 3'
     }
   ];
-  tasksFromSelectedList: Array<any> = [];
 
   // selectedList: any;
   selectedListId: any;
 
-  addItemToTasks(task) {
-    this.tasks.push(task);
+  addItemToTasks(taskName) {
+    this.tasks.push({
+      id: this.tasks.length + 1,
+      listId: this.selectedListId,
+      name: taskName,
+      done: false
+    });
   }
 
   addItemToLists(listName) {
@@ -57,18 +61,17 @@ export class AppComponent {
     });
   }
 
+  tasksFromSelectedList() {
+    return this.tasks.filter(task => task.listId === this.selectedListId);
+  }
+
   selectList(list) {
-    // this.selectedList = list;
     this.selectedListId = list.id;
-    this.tasksFromSelectedList = this.tasks.filter(task => task.listId === list.id);
   }
 
   deleteList(listToDelete) {
     this.lists = this.lists.filter(list => list.id !== listToDelete.id);
     this.tasks = this.tasks.filter(task => task.id !== listToDelete.id);
-    if (this.tasksFromSelectedList || listToDelete.id === this.tasksFromSelectedList[0].id) {
-      this.tasksFromSelectedList = [];
-    }
   }
 
 }
