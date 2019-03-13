@@ -1,12 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- Add task component -->
+<h1>{{ selectedList.id }}</h1>
 <main>
   <div class="lists__container">
     <h3>Lists</h3>
-    <!-- Add task component -->
+    <!-- Add list component -->
     <app-add-to-list (OnAddToList)="addItemToLists($event)"></app-add-to-list>
     <div class="lists">
-      <app-list-item *ngFor="let list of lists" [newList]="list"></app-list-item>
+      <app-list-item
+        *ngFor="let list of lists"
+        [newList]="list"
+        (OnGetSelectedListId)="selectList($event)"></app-list-item>
     </div>
   </div>
   <div class="tasks__container">

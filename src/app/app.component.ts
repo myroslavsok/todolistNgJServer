@@ -39,6 +39,8 @@ export class AppComponent {
     }
   ];
 
+  selectedList: any;
+
   addItemToTasks(task) {
     this.tasks.push(task);
   }
@@ -46,4 +48,9 @@ export class AppComponent {
   addItemToLists(list) {
     this.lists.push(list);
   }
+
+  selectList(list) {
+    this.selectedList = list;
+  }
+
 }
