@@ -43,4 +43,10 @@ export class TodolistsService {
     return this.http.delete(this.tasksUrs + `/${targetTaskId}`);
   }
 
+  changeNameOfTask(targetTask) {
+    return this.http.patch(this.tasksUrs + `/${targetTask.id}`, {
+      name: targetTask.name
+    });
+  }
+
 }
