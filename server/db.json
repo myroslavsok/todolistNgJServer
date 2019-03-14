@@ -1,9 +1,66 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "lists": [
+    {
+      "name": "Second list",
+      "id": 2
+    },
+    {
+      "name": "Third list",
+      "id": 3
+    },
+    {
+      "name": "123",
+      "id": 4
+    }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "tasks": [
+    {
+      "listId": 3,
+      "name": "bread 2",
+      "checked": false,
+      "id": 10
+    },
+    {
+      "listId": 3,
+      "name": "water",
+      "checked": false,
+      "id": 11
+    },
+    {
+      "listId": 2,
+      "name": "fly 12312",
+      "checked": true,
+      "id": 12
+    },
+    {
+      "listId": 2,
+      "name": "sit",
+      "checked": false,
+      "id": 13
+    },
+    {
+      "listId": 4,
+      "name": "1",
+      "checked": false,
+      "id": 14
+    },
+    {
+      "listId": 4,
+      "name": "2",
+      "checked": true,
+      "id": 15
+    },
+    {
+      "listId": 4,
+      "name": "3",
+      "checked": true,
+      "id": 16
+    },
+    {
+      "listId": 4,
+      "name": "4",
+      "checked": true,
+      "id": 17
+    }
+  ]
 }

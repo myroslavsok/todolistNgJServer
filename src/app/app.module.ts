@@ -2,12 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
+// Modules
 import { AppRoutingModule } from './app-routing.module';
+
+// Components
 import { AppComponent } from './app.component';
 import { AddToListComponent } from './components/add-to-list/add-to-list.component';
 import { ListComponent } from './components/list/list.component';
 import { ListItemComponent } from './components/list-item/list-item.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
+
+// Services
+import { TodolistsService } from './shared/services/todolists.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,7 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TodolistsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
