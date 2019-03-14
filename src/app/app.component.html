@@ -1,6 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<!-- Add task component -->
-<!-- <h1>{{ selectedList.i }}</h1> -->
 <main>
   <div class="lists__container">
     <h3>Lists</h3>
@@ -12,7 +10,9 @@
         [newList]="list"
         [selectedListId]="selectedListId"
         (OnGetSelectedListId)="selectList($event)"
-        (OnDeleteList)="deleteList($event)"></app-list-item>
+        (OnDeleteList)="deleteList($event)"
+      >
+    </app-list-item>
     </div>
   </div>
   <div class="tasks__container">
@@ -31,13 +31,4 @@
     </div>
   </div>
 </main>
-
-
-<b>Tasks</b>
-<p *ngFor="let task of tasks">{{ task.name }} {{ task.done }}</p>
-<br>
-<b>Lists</b>
-<p *ngFor="let list of lists">{{ list.name }}</p>
-
-
 <router-outlet></router-outlet>
