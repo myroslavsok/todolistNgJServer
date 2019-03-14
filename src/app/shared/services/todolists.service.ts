@@ -49,4 +49,10 @@ export class TodolistsService {
     });
   }
 
+  markTask(targetTask) {
+    return this.http.patch(this.tasksUrs + `/${targetTask.id}`, {
+      done: targetTask.done
+    });
+  }
+
 }

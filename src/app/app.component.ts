@@ -108,11 +108,15 @@ export class AppComponent implements OnInit {
   }
 
   markTask(targetTask) {
-    this.tasks.forEach(task => {
-      if (task.id === targetTask.id) {
-        task.done = targetTask.done;
-      }
-    });
+    this.todolistsService
+      .markTask(targetTask)
+      .subscribe(resp => {
+        this.tasks.forEach(task => {
+          if (task.id === resp.id) {
+            task.done = resp.done;
+          }
+        });
+      });
   }
 
   changeTaskName(targetTask) {

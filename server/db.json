@@ -27,25 +27,25 @@
     {
       "listId": 3,
       "name": "water",
-      "done": false,
+      "done": true,
       "id": 11
     },
     {
       "listId": 2,
       "name": "fly 12312",
-      "done": true,
+      "done": false,
       "id": 12
     },
     {
       "listId": 2,
       "name": "sit",
-      "done": false,
+      "done": true,
       "id": 13
     },
     {
       "listId": 4,
       "name": "Normal name",
-      "done": true,
+      "done": false,
       "id": 15
     },
     {
@@ -69,7 +69,7 @@
     {
       "listId": 5,
       "name": "awd",
-      "done": false,
+      "done": true,
       "id": 20
     }
   ]
