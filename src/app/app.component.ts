@@ -100,10 +100,8 @@ export class AppComponent implements OnInit {
       .deleteList(targetList)
       .subscribe(resp => {
         this.lists = this.lists.filter(list => list.id !== targetList.id);
-        this.tasks = this.tasks.filter(task => task.id !== targetList.id);
+        this.tasks = this.tasks.filter(task => task.listId !== targetList.id);
       });
-
-    // this.lists = this.lists.filter(list => list.id !== targetList.id);
   }
 
   markTask(targetTask) {
