@@ -1,0 +1,33 @@
+.is__done {
+  background-color: lightcoral;
+}
+
+.is__done .task__txt {
+  text-decoration: line-through;
+}
+
+.task__item {
+  width: 98%;
+  height: 50px;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.task__txt {
+  flex-grow: 1;
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.control__panel {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100px;
+  width: 100%;
+  margin: 0 10px;
+}

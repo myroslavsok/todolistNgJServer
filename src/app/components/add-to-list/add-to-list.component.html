@@ -1,0 +1,12 @@
+<form class="add__panel" (ngSubmit)="addToList(addForm)"  #addForm="ngForm">
+  <input
+    type="text"
+    name="add_field"
+    [disabled]="!selectedList"
+    ngModel
+    #addField
+    required
+    autocomplete="off"
+  >
+  <button type="submit" [disabled]="!addForm.valid">Add new</button>
+</form>

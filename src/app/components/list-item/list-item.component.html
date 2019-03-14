@@ -1,0 +1,6 @@
+<div class="list__item" id="{{ newList.id }}" [class.selected__list]="newList.id == selectedListId">
+  <label (click)="getSelectedListId()">
+    {{ newList.name }}
+  </label>
+  <button (click)="deleteList()">DELETE</button>
+</div>
