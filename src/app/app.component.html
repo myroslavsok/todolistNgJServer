@@ -20,14 +20,14 @@
     <!-- Add task component -->
     <app-add-to-list (OnAddToList)="addItemToTasks($event)"></app-add-to-list>
     <div class="tasks">
-      <!-- <app-task-item
-        *ngFor="let task of tasksFromSelectedList()"
+      <app-task-item
+        *ngFor="let task of tasks"
         [newTask]="task"
         (OnMarkTaskAsDone)="markTask($event)"
         (OnEditTask)="changeTaskName($event)"
         (OnDeleteTask)="deleteTask($event)"
       >
-      </app-task-item> -->
+      </app-task-item>
     </div>
   </div>
 </main>

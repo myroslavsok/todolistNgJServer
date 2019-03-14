@@ -47,7 +47,6 @@ export class AppComponent implements OnInit {
 
   tasks;
   lists;
-
   // selectedList: any;
   selectedListId: any;
 
@@ -77,11 +76,23 @@ export class AppComponent implements OnInit {
   }
 
   tasksFromSelectedList() {
-    return this.tasks.filter(task => task.listId === this.selectedListId);
+    this.todolistsService
+      .getTasksFromSelectedList(this.selectedListId)
+      .subscribe(resp => {
+        console.log('tasks resp', resp);
+        return this.tasks = resp;
+      });
+    // return this.tasks.filter(task => task.listId === this.selectedListId);
   }
 
   selectList(list) {
     this.selectedListId = list.id;
+    this.todolistsService
+      .getTasksFromSelectedList(this.selectedListId)
+      .subscribe(resp => {
+        console.log('tasks resp', resp);
+        this.tasks = resp;
+      });
   }
 
   deleteList(targetList) {

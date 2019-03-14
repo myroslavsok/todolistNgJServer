@@ -15,8 +15,8 @@ export class TodolistsService {
     return this.http.get(this.listsUrl);
   }
 
-  getTasks() {
-    return this.http.get(this.tasks);
+  getTasksFromSelectedList(selectedListId) {
+    return this.http.get(this.tasks + `?listId=${selectedListId}`);
   }
 
 }
