@@ -5,7 +5,7 @@
   <div class="lists__container">
     <h3>Lists</h3>
     <!-- Add list component -->
-    <app-add-to-list (OnAddToList)="addItemToLists($event)"></app-add-to-list>
+    <app-add-to-list (OnAddToList)="addItemToLists($event)" [selectedList]="true"></app-add-to-list>
     <div class="lists">
       <app-list-item
         *ngFor="let list of lists"
@@ -18,7 +18,7 @@
   <div class="tasks__container">
     <h3>Tasks</h3>
     <!-- Add task component -->
-    <app-add-to-list (OnAddToList)="addItemToTasks($event)"></app-add-to-list>
+    <app-add-to-list (OnAddToList)="addItemToTasks($event)" [selectedList]="selectedListId"></app-add-to-list>
     <div class="tasks">
       <app-task-item
         *ngFor="let task of tasks"

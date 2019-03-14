@@ -15,9 +15,15 @@ export class TodolistsService {
     return this.http.get(this.listsUrl);
   }
 
-  // addList() {
-  //   return this.http.post(this.listsUrl);
-  // }
+  addList(listName) {
+     return this.http.post(this.listsUrl, {
+      name: listName
+    });
+  }
+
+  deleteList(targetList) {
+    return this.http.delete(this.listsUrl + `?listId=${targetList}`);
+  }
 
   getTasksFromSelectedList(selectedListId) {
     return this.http.get(this.tasks + `?listId=${selectedListId}`);

@@ -59,7 +59,8 @@ export class AppComponent implements OnInit {
       });
   }
 
-  addItemToTasks(taskName) {
+  addItemToTasks(taskName, selectedListId) {
+
     this.tasks.push({
       id: this.tasks.length + 1,
       listId: this.selectedListId,
@@ -69,10 +70,12 @@ export class AppComponent implements OnInit {
   }
 
   addItemToLists(listName) {
-    this.lists.push({
-      id: this.lists.length + 1,
-      name: listName
-    });
+    this.todolistsService
+      .addList(listName)
+      .subscribe(resp => {
+        console.log('add list resp', resp);
+        this.lists.push(resp);
+      });
   }
 
   // To delete
@@ -91,8 +94,15 @@ export class AppComponent implements OnInit {
   }
 
   deleteList(targetList) {
-    this.lists = this.lists.filter(list => list.id !== targetList.id);
-    this.tasks = this.tasks.filter(task => task.id !== targetList.id);
+    this.todolistsService
+      .deleteList(targetList)
+      .subscribe(resp => {
+        console.log('delete list resp', resp);
+        this.lists = this.lists.filter(list => list.id !== targetList.id);
+        this.tasks = this.tasks.filter(task => task.id !== targetList.id);
+      });
+
+    // this.lists = this.lists.filter(list => list.id !== targetList.id);
   }
 
   markTask(targetTask) {

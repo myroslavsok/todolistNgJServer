@@ -11,6 +11,10 @@
     {
       "name": "123",
       "id": 4
+    },
+    {
+      "name": "New list",
+      "id": 5
     }
   ],
   "tasks": [
