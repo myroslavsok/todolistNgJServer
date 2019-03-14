@@ -9,14 +9,14 @@ export class TodolistsService {
   constructor(private http: HttpClient) {}
 
   listsUrl = 'http://localhost:3000/lists';
-  tasks = 'http://localhost:3000/tasks';
+  tasksUrs = 'http://localhost:3000/tasks';
 
   getLists() {
     return this.http.get(this.listsUrl);
   }
 
   addList(listName) {
-     return this.http.post(this.listsUrl, {
+    return this.http.post(this.listsUrl, {
       name: listName
     });
   }
@@ -26,7 +26,15 @@ export class TodolistsService {
   }
 
   getTasksFromSelectedList(selectedListId) {
-    return this.http.get(this.tasks + `?listId=${selectedListId}`);
+    return this.http.get(this.tasksUrs + `?listId=${selectedListId}`);
+  }
+
+  addTaskToselectedList(body) {
+    return this.http.post(this.tasksUrs, {
+      listId: body.listId,
+      name: body.name,
+      done: false,
+    });
   }
 
 }

@@ -59,14 +59,22 @@ export class AppComponent implements OnInit {
       });
   }
 
-  addItemToTasks(taskName, selectedListId) {
-
-    this.tasks.push({
-      id: this.tasks.length + 1,
+  addItemToTasks(taskName) {
+    const queryBody = {
       listId: this.selectedListId,
-      name: taskName,
-      done: false
-    });
+      name: taskName
+    }
+    this.todolistsService
+      .addTaskToselectedList(queryBody)
+      .subscribe(resp => {
+        this.tasks.push(resp);
+      });
+    // this.tasks.push({
+    //   id: this.tasks.length + 1,
+    //   listId: this.selectedListId,
+    //   name: taskName,
+    //   done: false
+    // });
   }
 
   addItemToLists(listName) {
