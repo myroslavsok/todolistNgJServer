@@ -23,7 +23,7 @@ export class TodolistsService {
   }
 
   deleteList(targetList) {
-    return this.http.delete(this.listsUrl + `?id=${targetList}`);
+    return this.http.delete(this.listsUrl + `/${targetList.id}`);
   }
 
   // Tasks

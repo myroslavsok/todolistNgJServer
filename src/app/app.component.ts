@@ -99,7 +99,6 @@ export class AppComponent implements OnInit {
     this.todolistsService
       .deleteList(targetList)
       .subscribe(resp => {
-        console.log('delete list resp', resp);
         this.lists = this.lists.filter(list => list.id !== targetList.id);
         this.tasks = this.tasks.filter(task => task.id !== targetList.id);
       });
@@ -112,8 +111,8 @@ export class AppComponent implements OnInit {
       .markTask(targetTask)
       .subscribe(resp => {
         this.tasks.forEach(task => {
-          if (task.id === resp.id) {
-            task.done = resp.done;
+          if (task.id === targetTask.id) {
+            task.done = targetTask.done;
           }
         });
       });
@@ -124,8 +123,8 @@ export class AppComponent implements OnInit {
       .changeNameOfTask(targetTask)
       .subscribe(resp => {
         this.tasks.forEach(task => {
-          if (task.id === resp.id) {
-            task.name = resp.name;
+          if (task.id === targetTask.id) {
+            task.name = targetTask.name;
           }
         });
       });

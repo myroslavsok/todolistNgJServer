@@ -7,23 +7,9 @@
     {
       "name": "Third list",
       "id": 3
-    },
-    {
-      "name": "123",
-      "id": 4
-    },
-    {
-      "name": "New list",
-      "id": 5
     }
   ],
   "tasks": [
-    {
-      "listId": 3,
-      "name": "bread 2",
-      "done": false,
-      "id": 10
-    },
     {
       "listId": 3,
       "name": "water",
@@ -41,36 +27,6 @@
       "name": "sit",
       "done": true,
       "id": 13
-    },
-    {
-      "listId": 4,
-      "name": "Normal name",
-      "done": false,
-      "id": 15
-    },
-    {
-      "listId": 4,
-      "name": "Bad name",
-      "done": true,
-      "id": 17
-    },
-    {
-      "listId": 5,
-      "name": "dog",
-      "done": false,
-      "id": 18
-    },
-    {
-      "listId": 5,
-      "name": "cat",
-      "done": false,
-      "id": 19
-    },
-    {
-      "listId": 5,
-      "name": "awd",
-      "done": true,
-      "id": 20
     }
   ]
 }
