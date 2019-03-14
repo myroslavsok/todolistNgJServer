@@ -69,12 +69,6 @@ export class AppComponent implements OnInit {
       .subscribe(resp => {
         this.tasks.push(resp);
       });
-    // this.tasks.push({
-    //   id: this.tasks.length + 1,
-    //   listId: this.selectedListId,
-    //   name: taskName,
-    //   done: false
-    // });
   }
 
   addItemToLists(listName) {
@@ -129,9 +123,11 @@ export class AppComponent implements OnInit {
     });
   }
 
-  deleteTask(taskId) {
-    console.log(taskId);
-    this.tasks = this.tasks.filter(task => task.id !== taskId);
+  deleteTask(targetTaskId) {
+    this.todolistsService
+      .deleteTaskFromSelectedList(targetTaskId)
+      .subscribe(resp => console.log(resp));
+      this.tasks = this.tasks.filter(task => task.id !== targetTaskId);
   }
 
 }

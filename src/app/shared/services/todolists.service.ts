@@ -11,6 +11,7 @@ export class TodolistsService {
   listsUrl = 'http://localhost:3000/lists';
   tasksUrs = 'http://localhost:3000/tasks';
 
+  // Lists
   getLists() {
     return this.http.get(this.listsUrl);
   }
@@ -22,9 +23,10 @@ export class TodolistsService {
   }
 
   deleteList(targetList) {
-    return this.http.delete(this.listsUrl + `?listId=${targetList}`);
+    return this.http.delete(this.listsUrl + `?id=${targetList}`);
   }
 
+  // Tasks
   getTasksFromSelectedList(selectedListId) {
     return this.http.get(this.tasksUrs + `?listId=${selectedListId}`);
   }
@@ -35,6 +37,10 @@ export class TodolistsService {
       name: body.name,
       done: false,
     });
+  }
+
+  deleteTaskFromSelectedList(targetTaskId) {
+    return this.http.delete(this.tasksUrs + `/${targetTaskId}`);
   }
 
 }
