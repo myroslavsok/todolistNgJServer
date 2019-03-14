@@ -75,14 +75,9 @@ export class AppComponent implements OnInit {
     });
   }
 
+  // To delete
   tasksFromSelectedList() {
-    this.todolistsService
-      .getTasksFromSelectedList(this.selectedListId)
-      .subscribe(resp => {
-        console.log('tasks resp', resp);
-        return this.tasks = resp;
-      });
-    // return this.tasks.filter(task => task.listId === this.selectedListId);
+    return this.tasks.filter(task => task.listId === this.selectedListId);
   }
 
   selectList(list) {
