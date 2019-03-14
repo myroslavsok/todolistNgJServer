@@ -37,19 +37,19 @@
     {
       "listId": 2,
       "name": "Dog",
-      "done": false,
+      "done": true,
       "id": 5
     },
     {
       "listId": 2,
       "name": "Cat",
-      "done": false,
+      "done": true,
       "id": 6
     },
     {
       "listId": 2,
       "name": "Rat",
-      "done": false,
+      "done": true,
       "id": 7
     },
     {
