@@ -20,8 +20,9 @@ export class TaskItemComponent {
   }
 
   editTask() {
-    const newName = prompt('Enter new name', '');
-    if (!newName || newName == null) {
+    const newName = prompt('Enter new name', this.newTask.name);
+    if (!newName || newName === this.newTask.name) {
+      console.log('Stop'); 
       return;
     }
     this.OnEditTask.emit({

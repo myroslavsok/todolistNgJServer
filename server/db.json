@@ -1,38 +1,62 @@
 {
   "lists": [
     {
-      "name": "Second list",
-      "id": 2
+      "name": "Food",
+      "id": 1
     },
     {
-      "name": "Third list",
-      "id": 3
+      "name": "Animals",
+      "id": 2
     }
   ],
   "tasks": [
     {
-      "listId": 3,
-      "name": "water",
-      "done": true,
-      "id": 11
-    },
-    {
-      "listId": 2,
-      "name": "fly 12312",
-      "done": true,
-      "id": 12
-    },
-    {
-      "listId": 2,
-      "name": "sit",
-      "done": true,
-      "id": 13
-    },
-    {
-      "listId": 3,
-      "name": "melon",
+      "listId": 1,
+      "name": "Apple",
       "done": false,
-      "id": 14
+      "id": 1
+    },
+    {
+      "listId": 1,
+      "name": "Pineapple",
+      "done": false,
+      "id": 2
+    },
+    {
+      "listId": 1,
+      "name": "Melon",
+      "done": true,
+      "id": 3
+    },
+    {
+      "listId": 1,
+      "name": "Soup",
+      "done": false,
+      "id": 4
+    },
+    {
+      "listId": 2,
+      "name": "Dog",
+      "done": false,
+      "id": 5
+    },
+    {
+      "listId": 2,
+      "name": "Cat",
+      "done": false,
+      "id": 6
+    },
+    {
+      "listId": 2,
+      "name": "Rat",
+      "done": false,
+      "id": 7
+    },
+    {
+      "listId": 2,
+      "name": "Humans",
+      "done": false,
+      "id": 8
     }
   ]
 }
