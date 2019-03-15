@@ -9,8 +9,7 @@ import { TodolistComponent } from './components/todolist/todolist.component';
 const routes: Routes = [
   { path: '', redirectTo: '/preview', pathMatch: 'full' },
   { path: 'preview', component: PreviewPageComponent },
-  { path: 'todolist', component: TodolistComponent },
-  { path: '', component: AppComponent },
+  { path: 'todolist/:id', component: TodolistComponent },
   { path: '**', redirectTo: '/' }  
 ];
 
