@@ -19,6 +19,8 @@ export class TodolistComponent implements OnInit {
   tasks;
   lists;
   selectedListId: any;
+  addListBtnName = 'Add list';
+  addTaskBtnName = 'Add task';
 
   ngOnInit() {
     this.getSelectedListId();

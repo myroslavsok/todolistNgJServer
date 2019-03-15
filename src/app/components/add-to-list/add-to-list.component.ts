@@ -9,6 +9,7 @@ export class AddToListComponent {
 
   @Output() OnAddToList = new EventEmitter<any>();
   @Input() selectedList;
+  @Input() btnName;
 
   addToList(addField) {
     this.OnAddToList.emit(addField.value.add_field);
