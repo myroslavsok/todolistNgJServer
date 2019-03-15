@@ -38,9 +38,9 @@ export class PreviewPageComponent implements OnInit {
 
   sortListTasksForThreeUndone(tasks) {
     tasks = tasks.filter(task => (task.done));
-    if (tasks.length > 3) {
-      tasks[3].name = '...';
-      tasks.length = 4;
+    if (tasks.length > 5) {
+      tasks[5].name = '...';
+      tasks.length = 6;
     }
     return tasks;
   }

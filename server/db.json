@@ -7,6 +7,10 @@
     {
       "name": "Animals",
       "id": 2
+    },
+    {
+      "name": "Cars",
+      "id": 3
     }
   ],
   "tasks": [
@@ -87,6 +91,36 @@
       "name": "Fish",
       "done": true,
       "id": 13
+    },
+    {
+      "listId": 2,
+      "name": "Zebra",
+      "done": true,
+      "id": 14
+    },
+    {
+      "listId": 3,
+      "name": "Bentley",
+      "done": false,
+      "id": 15
+    },
+    {
+      "listId": 3,
+      "name": "Bugatti",
+      "done": false,
+      "id": 16
+    },
+    {
+      "listId": 3,
+      "name": "Mersedes",
+      "done": false,
+      "id": 17
+    },
+    {
+      "listId": 3,
+      "name": "Mazda",
+      "done": false,
+      "id": 18
     }
   ]
 }

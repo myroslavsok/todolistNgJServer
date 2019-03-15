@@ -1,3 +1,26 @@
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back__to__preview {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: black;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.back__to__preview:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+
 main {
     width: 100%;
     height: 500px;
@@ -7,11 +30,11 @@ main {
     justify-content: space-around;
     align-items: stretch;
     border: 2px solid lightgray;
-  }
+}
   
-  .lists__container {
+.lists__container {
     flex-grow: 1;
-  }
+}
   
   .tasks__container {
     flex-grow: 3;
