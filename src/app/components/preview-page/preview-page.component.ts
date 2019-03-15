@@ -15,17 +15,28 @@ export class PreviewPageComponent implements OnInit {
   ) { }
 
   lists;
+  undoneTasks;
 
   ngOnInit() {
     this.getListsAndTasks();
   }
 
   getListsAndTasks() {
+
     this.todolistsService
       .getLists()
       .subscribe(res => {
         this.lists = res;
         this.sortListsByPinFirst();
+        this.todolistsService
+          .getUndoneTasksFromSelectedList()
+          .subscribe(res => {
+            this.undoneTasks = res;
+            this.lists.forEach(list => {
+              list.undoneTasks = this.undoneTasks.filter(task => task.listId === list.id);
+              console.log('Undone tasks', this.lists);
+            })
+          });
       });
   }
 
