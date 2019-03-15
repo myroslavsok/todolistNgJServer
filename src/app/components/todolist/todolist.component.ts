@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TodolistsService } from '../../shared/services/todolists.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todolist',
@@ -11,7 +12,8 @@ export class TodolistComponent implements OnInit {
 
   constructor(
     private todolistsService: TodolistsService,
-    private route: ActivatedRoute
+    private activeRoute: ActivatedRoute,
+    private route: Router
   ) {}
 
   tasks;
@@ -25,7 +27,7 @@ export class TodolistComponent implements OnInit {
   }
 
   getSelectedListId() {
-    this.selectedListId = +this.route.snapshot.paramMap.get('id');
+    this.selectedListId = +this.activeRoute.snapshot.paramMap.get('id');
   }
   
   getLists() {
@@ -74,6 +76,7 @@ export class TodolistComponent implements OnInit {
       .subscribe(resp => {
         console.log('tasks resp', resp);
         this.tasks = resp;
+        this.route.navigate([`/todolist/${list.id}`]);
       });
   }
 

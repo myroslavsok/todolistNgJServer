@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/preview', pathMatch: 'full' },
   { path: 'preview', component: PreviewPageComponent },
   { path: 'todolist/:id', component: TodolistComponent },
-  { path: 'createTodolist', component: TodolistComponent },
+  { path: 'todolist', component: TodolistComponent },
   { path: '**', redirectTo: '/' }  
 ];
 
