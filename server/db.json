@@ -2,7 +2,7 @@
   "lists": [
     {
       "name": "Food",
-      "pin": false,
+      "pin": true,
       "id": 1
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "name": "Cars",
-      "pin": true,
+      "pin": false,
       "id": 3
     },
     {

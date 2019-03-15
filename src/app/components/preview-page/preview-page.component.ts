@@ -44,7 +44,8 @@ export class PreviewPageComponent implements OnInit {
 
   navigateToTodolist(event, listId) {
     let targetPinBtn = event.target.closest('span.pin__btn');
-    if (!targetPinBtn) {
+    let targetCard = event.target.closest('div.list__card');
+    if (!targetPinBtn && targetCard) {
       return this.route.navigate([`/todolist/${listId}`]);
     }
   }
