@@ -15,6 +15,10 @@
     {
       "name": "All done",
       "id": 4
+    },
+    {
+      "name": "Empty list",
+      "id": 5
     }
   ],
   "tasks": [
