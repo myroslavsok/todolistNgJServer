@@ -13,13 +13,13 @@
     {
       "listId": 1,
       "name": "Apple",
-      "done": false,
+      "done": true,
       "id": 1
     },
     {
       "listId": 1,
       "name": "Pineapple",
-      "done": false,
+      "done": true,
       "id": 2
     },
     {
@@ -31,7 +31,7 @@
     {
       "listId": 1,
       "name": "Soup",
-      "done": false,
+      "done": true,
       "id": 4
     },
     {
@@ -57,6 +57,12 @@
       "name": "Humans",
       "done": false,
       "id": 8
+    },
+    {
+      "listId": 1,
+      "name": "Banana",
+      "done": false,
+      "id": 9
     }
   ]
 }

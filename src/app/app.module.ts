@@ -16,6 +16,7 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 // Services
 import { TodolistsService } from './shared/services/todolists.service';
 import { PreviewPageComponent } from './components/preview-page/preview-page.component';
+import { TodolistComponent } from './components/todolist/todolist.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PreviewPageComponent } from './components/preview-page/preview-page.com
     ListComponent,
     ListItemComponent,
     TaskItemComponent,
-    PreviewPageComponent
+    PreviewPageComponent,
+    TodolistComponent
   ],
   imports: [
     BrowserModule,
