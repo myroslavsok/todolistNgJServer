@@ -18,12 +18,19 @@ export class TodolistsService {
 
   addList(listName) {
     return this.http.post(this.listsUrl, {
-      name: listName
+      name: listName,
+      pin: false
     });
   }
 
   deleteList(targetList) {
     return this.http.delete(this.listsUrl + `/${targetList.id}`);
+  }
+
+  pinList(targetList) {
+    return this.http.patch(this.listsUrl + `/${targetList.id}`, {
+      pin: !targetList.pin
+    });
   }
 
   // Tasks

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Components
-import { AppComponent } from './app.component';
 import { PreviewPageComponent } from './components/preview-page/preview-page.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
 

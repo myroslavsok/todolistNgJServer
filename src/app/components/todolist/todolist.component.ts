@@ -58,11 +58,6 @@ export class TodolistComponent implements OnInit {
       });
   }
 
-  // To delete
-  // tasksFromSelectedList() {
-  //   return this.tasks.filter(task => task.listId === this.selectedListId);
-  // }
-
   getTasksFromSelectedList() {
     this.todolistsService
       .getTasksFromSelectedList(this.selectedListId)

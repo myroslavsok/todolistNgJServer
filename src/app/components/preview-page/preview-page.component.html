@@ -3,11 +3,11 @@
   <a routerLink="/createTodolist" class="create__newlist">Create new list</a>
 </nav>
 <main>
-  <div *ngFor="let list of lists" (click)="navigateToTodolist(list.id)" class="list__card">
-    <h3 class="list__name">{{ list.name }}</h3>
-
-    <ul class="tasks__container">
-      <li *ngFor="let task of list.listTasks" class="task__name">{{ task.name }}</li>
-    </ul>
-  </div>
+  <app-preview-page-list-card 
+    *ngFor="let list of lists"
+    [thisList]="list"
+    (click)="navigateToTodolist($event, list.id)"
+    (OnPinList)="sortListsByPinFirst()"
+  >
+  </app-preview-page-list-card>
 </main>

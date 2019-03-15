@@ -2,23 +2,38 @@
   "lists": [
     {
       "name": "Food",
+      "pin": false,
       "id": 1
     },
     {
       "name": "Animals",
+      "pin": false,
       "id": 2
     },
     {
       "name": "Cars",
+      "pin": false,
       "id": 3
     },
     {
       "name": "All done",
+      "pin": false,
       "id": 4
     },
     {
       "name": "Empty list",
+      "pin": false,
       "id": 5
+    },
+    {
+      "name": "1",
+      "pin": false,
+      "id": 6
+    },
+    {
+      "name": "2",
+      "pin": true,
+      "id": 7
     }
   ],
   "tasks": [
@@ -159,6 +174,30 @@
       "name": "Jump",
       "done": true,
       "id": 23
+    },
+    {
+      "listId": 7,
+      "name": "2 1",
+      "done": false,
+      "id": 24
+    },
+    {
+      "listId": 7,
+      "name": "2 2",
+      "done": false,
+      "id": 25
+    },
+    {
+      "listId": 7,
+      "name": "2 3",
+      "done": false,
+      "id": 26
+    },
+    {
+      "listId": 6,
+      "name": "1 1",
+      "done": true,
+      "id": 27
     }
   ]
 }

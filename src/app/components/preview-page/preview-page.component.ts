@@ -15,7 +15,6 @@ export class PreviewPageComponent implements OnInit {
   ) { }
 
   lists;
-  tasks = [];
 
   ngOnInit() {
     this.getListsAndTasks();
@@ -26,32 +25,30 @@ export class PreviewPageComponent implements OnInit {
       .getLists()
       .subscribe(res => {
         this.lists = res;
-        this.lists.map(list => {
-          this.todolistsService
-            .getTasksFromSelectedList(list.id)
-            .subscribe(res => {
-              list.listTasks = this.sortListTasksForThreeUndone(res);
-            });
-        })
+        this.sortListsByPinFirst();
+        // this.sortLists(this.pinnedFirstSorting);
+        // this.lists = this.lists.sort(this.sortPinnedFirst);
       });
-
   }
 
-  sortListTasksForThreeUndone(tasks) {
-    tasks = tasks.filter(task => !task.done);
-    if (tasks.length > 5) {
-      tasks[5].name = '...';
-      tasks.length = 6;
-    } else if (tasks.length === 0) {
-      tasks = [{
-        name: 'Everything is done.'
-      }];
+
+  sortListsByPinFirst() {
+    this.lists = this.lists.sort(this.pinnedFirstSorting);
+  }
+
+  pinnedFirstSorting(a, b) {
+    if (a.pin < b.pin)
+      return 1;
+    if (a.pin > b.pin)
+      return -1;
+    return 0;
+  }
+
+  navigateToTodolist(event, listId) {
+    let targetPinBtn = event.target.closest('button.pin__btn');
+    if (!targetPinBtn) {
+      return this.route.navigate([`/todolist/${listId}`]);
     }
-    return tasks;
-  }
-
-  navigateToTodolist(listId) {
-    this.route.navigate([`/todolist/${listId}`]);
   }
 
 }

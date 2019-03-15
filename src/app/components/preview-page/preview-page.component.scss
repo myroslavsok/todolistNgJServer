@@ -41,35 +41,35 @@ main {
 }
 
 .list__card {
-    display: block;
-    max-width: 250px;
-    width: 100%;
-    height: 265px;
-    margin: 20px;
-    padding: 10px;
-    cursor: pointer;
-    border: 1px solid lightgray;
-    border-radius: 4px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  display: block;
+  max-width: 250px;
+  width: 100%;
+  height: 265px;
+  margin: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .list__card:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .tasks__container {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .task__name {
-    margin: 5px 10px;
-    padding: 5px 10px;
+  margin: 5px 10px;
+  padding: 5px 10px;
 }
 
 .task__name:nth-child(6) {
-    font-size: 20px;
-    letter-spacing: 3px;
-    font-weight: bold;
-    text-align: center;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-align: center;
 }
