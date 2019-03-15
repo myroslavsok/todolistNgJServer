@@ -26,8 +26,6 @@ export class PreviewPageComponent implements OnInit {
       .subscribe(res => {
         this.lists = res;
         this.sortListsByPinFirst();
-        // this.sortLists(this.pinnedFirstSorting);
-        // this.lists = this.lists.sort(this.sortPinnedFirst);
       });
   }
 
@@ -45,7 +43,7 @@ export class PreviewPageComponent implements OnInit {
   }
 
   navigateToTodolist(event, listId) {
-    let targetPinBtn = event.target.closest('button.pin__btn');
+    let targetPinBtn = event.target.closest('span.pin__btn');
     if (!targetPinBtn) {
       return this.route.navigate([`/todolist/${listId}`]);
     }

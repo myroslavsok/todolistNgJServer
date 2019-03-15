@@ -1,7 +1,7 @@
 <div class="task__item" [class.is__done]="newTask.done">
   <span class="task__txt" (click)="markTaskAsDone()" >{{ newTask.name }}</span>
   <div class="control__panel">
-    <button class="btn__edit" (click)="editTask()">Edit</button>
-    <button class="btn__delete" (click)="deleteTask()">Delete</button>
+    <button class="btn__edit" (click)="editTask()">✎</button>
+    <button class="btn__delete" (click)="deleteTask()">✗</button>
   </div>
 </div>

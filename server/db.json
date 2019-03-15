@@ -7,12 +7,12 @@
     },
     {
       "name": "Animals",
-      "pin": false,
+      "pin": true,
       "id": 2
     },
     {
       "name": "Cars",
-      "pin": false,
+      "pin": true,
       "id": 3
     },
     {
@@ -32,8 +32,13 @@
     },
     {
       "name": "2",
-      "pin": true,
+      "pin": false,
       "id": 7
+    },
+    {
+      "name": "3",
+      "pin": false,
+      "id": 8
     }
   ],
   "tasks": [
@@ -82,7 +87,7 @@
     {
       "listId": 2,
       "name": "Humans",
-      "done": true,
+      "done": false,
       "id": 8
     },
     {
