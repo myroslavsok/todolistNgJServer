@@ -1,0 +1,52 @@
+.title {
+    text-align: center;
+}
+
+main {
+    max-width: 955px;
+    width: 100%;
+    height: 570px;
+    margin: auto;
+    overflow-y: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.list__card {
+    display: block;
+    width: 250px;
+    height: 220px;
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.list__card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.tasks__container {
+    list-style: none;
+    padding: 0;
+}
+
+.task__name {
+    margin: 10px 10px;
+    padding: 5px 10px;
+    // border: 1px solid gray;
+}
+
+.task__name:nth-child(4) {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-align: center;
+}
