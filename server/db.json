@@ -11,6 +11,10 @@
     {
       "name": "Cars",
       "id": 3
+    },
+    {
+      "name": "All done",
+      "id": 4
     }
   ],
   "tasks": [
@@ -41,25 +45,25 @@
     {
       "listId": 2,
       "name": "Dog",
-      "done": true,
+      "done": false,
       "id": 5
     },
     {
       "listId": 2,
       "name": "Cat",
-      "done": true,
+      "done": false,
       "id": 6
     },
     {
       "listId": 2,
       "name": "Rat",
-      "done": true,
+      "done": false,
       "id": 7
     },
     {
       "listId": 2,
       "name": "Humans",
-      "done": false,
+      "done": true,
       "id": 8
     },
     {
@@ -71,31 +75,31 @@
     {
       "listId": 2,
       "name": "Chicken",
-      "done": true,
+      "done": false,
       "id": 10
     },
     {
       "listId": 2,
       "name": "Bird",
-      "done": true,
+      "done": false,
       "id": 11
     },
     {
       "listId": 2,
       "name": "Goat",
-      "done": true,
+      "done": false,
       "id": 12
     },
     {
       "listId": 2,
       "name": "Fish",
-      "done": true,
+      "done": false,
       "id": 13
     },
     {
       "listId": 2,
       "name": "Zebra",
-      "done": true,
+      "done": false,
       "id": 14
     },
     {
@@ -121,6 +125,36 @@
       "name": "Mazda",
       "done": false,
       "id": 18
+    },
+    {
+      "listId": 3,
+      "name": "Lamborgini",
+      "done": false,
+      "id": 19
+    },
+    {
+      "listId": 3,
+      "name": "BWM",
+      "done": false,
+      "id": 20
+    },
+    {
+      "listId": 3,
+      "name": "Crysler",
+      "done": false,
+      "id": 21
+    },
+    {
+      "listId": 4,
+      "name": "Swim",
+      "done": true,
+      "id": 22
+    },
+    {
+      "listId": 4,
+      "name": "Jump",
+      "done": true,
+      "id": 23
     }
   ]
 }
