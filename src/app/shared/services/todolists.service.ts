@@ -10,6 +10,8 @@ export class TodolistsService {
 
   listsUrl = 'http://localhost:3000/lists';
   tasksUrs = 'http://localhost:3000/tasks';
+  // listsUrl = 'http://localhost:8080/lists';
+  // tasksUrs = 'http://localhost:8080/tasks';
 
   // Lists
   getLists() {

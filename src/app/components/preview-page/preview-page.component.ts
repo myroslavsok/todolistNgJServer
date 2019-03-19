@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TodolistsService } from '../../shared/services/todolists.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-preview-page',

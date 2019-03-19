@@ -12,7 +12,7 @@
     },
     {
       "name": "Cars",
-      "pin": true,
+      "pin": false,
       "id": 3
     },
     {
