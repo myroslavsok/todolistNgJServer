@@ -8,8 +8,6 @@ export class TodolistsService {
 
   constructor(private http: HttpClient) {}
 
-  // listsUrl = 'http://localhost:3000/lists';
-  // tasksUrs = 'http://localhost:3000/tasks';
   listsUrl = 'http://localhost:8080/lists';
   tasksUrs = 'http://localhost:8080/tasks';
 
@@ -38,12 +36,10 @@ export class TodolistsService {
 
   // Tasks
   getTasksFromSelectedList(selectedListId) {
-    // return this.http.get(this.tasksUrs + `?listId=${selectedListId}`);
     return this.http.get(this.tasksUrs + `/list/${selectedListId}`);
   }
 
   getUndoneTasksFromSelectedList() {
-    // return this.http.get(this.tasksUrs + `?done=false`);
     return this.http.get(this.tasksUrs + `/false`);
   }
 
@@ -68,21 +64,5 @@ export class TodolistsService {
       listId: targetTask.listId
     });
   }
-
-  // changeNameOfTask(targetTask) {
-  //   return this.http.patch(this.tasksUrs + `/${targetTask.id}`, {
-  //     name: targetTask.name,
-  //     done: targetTask.done,
-  //     listId: targetTask.listId
-  //   });
-  // }
-
-  // markTask(targetTask) {
-  //   return this.http.patch(this.tasksUrs + `/${targetTask.id}`, {
-  //     name: targetTask.name,
-  //     done: targetTask.done,
-  //     listId: targetTask.listId
-  //   });
-  // }
 
 }
