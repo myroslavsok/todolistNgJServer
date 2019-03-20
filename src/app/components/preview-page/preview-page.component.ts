@@ -28,16 +28,26 @@ export class PreviewPageComponent implements OnInit {
         this.todolistsService
           .getLists()
           .subscribe(lists => {
-            lists.forEach(list => list.undoneTasks = undoneTasks.filter(task => task.listId === list.id));
+            lists.forEach(list => list.undoneTasks = undoneTasks.filter(task => task.listId === list.id));            
             this.lists = lists;
             this.sortListsByPinFirst();
           })
       })
   }
 
+  pinList(targetList) {
+    this.sortListsByPinFirst();
+    this.savePinnedStatusOfListToBd(targetList);
+  }
 
   sortListsByPinFirst() {
     this.lists = this.lists.sort(this.pinnedFirstSorting);
+  }
+
+  savePinnedStatusOfListToBd(targetList) {
+    this.todolistsService
+      .pinList(targetList)
+      .subscribe(res => console.log('onPin', res));
   }
 
   pinnedFirstSorting(a, b) {

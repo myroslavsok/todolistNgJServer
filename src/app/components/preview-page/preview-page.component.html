@@ -7,7 +7,7 @@
     *ngFor="let list of lists"
     [thisList]="list"
     (click)="navigateToTodolist($event, list.id)"
-    (OnPinList)="sortListsByPinFirst()"
+    (OnPinList)="pinList($event)"
   >
   </app-preview-page-list-card>
 </main>

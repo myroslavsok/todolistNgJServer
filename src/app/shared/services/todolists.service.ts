@@ -32,7 +32,7 @@ export class TodolistsService {
   pinList(targetList) {
     return this.http.patch(this.listsUrl + `/${targetList.id}`, {
       name: targetList.name,
-      pin: !targetList.pin
+      pin: targetList.pin
     });
   }
 
