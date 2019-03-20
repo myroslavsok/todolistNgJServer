@@ -2,7 +2,7 @@
   "lists": [
     {
       "name": "Food",
-      "pin": false,
+      "pin": true,
       "id": 1
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "name": "Cars",
-      "pin": false,
+      "pin": true,
       "id": 3
     },
     {
@@ -37,20 +37,25 @@
     },
     {
       "name": "3",
-      "pin": true,
+      "pin": false,
       "id": 8
     },
     {
       "name": "new list",
       "pin": false,
       "id": 9
+    },
+    {
+      "name": "new list 2",
+      "pin": false,
+      "id": 10
     }
   ],
   "tasks": [
     {
       "listId": 1,
-      "name": "Apple",
-      "done": false,
+      "name": "Apple red yellow",
+      "done": true,
       "id": 1
     },
     {
@@ -220,6 +225,18 @@
       "name": "item 1",
       "done": false,
       "id": 29
+    },
+    {
+      "listId": 10,
+      "name": "chekc",
+      "done": true,
+      "id": 30
+    },
+    {
+      "listId": 10,
+      "name": "11",
+      "done": true,
+      "id": 31
     }
   ]
 }

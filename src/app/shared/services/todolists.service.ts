@@ -8,10 +8,10 @@ export class TodolistsService {
 
   constructor(private http: HttpClient) {}
 
-  listsUrl = 'http://localhost:3000/lists';
-  tasksUrs = 'http://localhost:3000/tasks';
-  // listsUrl = 'http://localhost:8080/lists';
-  // tasksUrs = 'http://localhost:8080/tasks';
+  // listsUrl = 'http://localhost:3000/lists';
+  // tasksUrs = 'http://localhost:3000/tasks';
+  listsUrl = 'http://localhost:8080/lists';
+  tasksUrs = 'http://localhost:8080/tasks';
 
   // Lists
   getLists() {
@@ -31,17 +31,20 @@ export class TodolistsService {
 
   pinList(targetList) {
     return this.http.patch(this.listsUrl + `/${targetList.id}`, {
+      name: targetList.name,
       pin: !targetList.pin
     });
   }
 
   // Tasks
   getTasksFromSelectedList(selectedListId) {
-    return this.http.get(this.tasksUrs + `?listId=${selectedListId}`);
+    // return this.http.get(this.tasksUrs + `?listId=${selectedListId}`);
+    return this.http.get(this.tasksUrs + `/list/${selectedListId}`);
   }
 
   getUndoneTasksFromSelectedList() {
-    return this.http.get(this.tasksUrs + `?done=false`); 
+    // return this.http.get(this.tasksUrs + `?done=false`);
+    return this.http.get(this.tasksUrs + `/false`);
   }
 
   addTaskToselectedList(body) {
@@ -56,16 +59,30 @@ export class TodolistsService {
     return this.http.delete(this.tasksUrs + `/${targetTaskId}`);
   }
 
-  changeNameOfTask(targetTask) {
+
+  changeTaskFields(targetTask) {
+    console.log('change sevice', targetTask);
     return this.http.patch(this.tasksUrs + `/${targetTask.id}`, {
-      name: targetTask.name
+      name: targetTask.name,
+      done: targetTask.done,
+      listId: targetTask.listId
     });
   }
 
-  markTask(targetTask) {
-    return this.http.patch(this.tasksUrs + `/${targetTask.id}`, {
-      done: targetTask.done
-    });
-  }
+  // changeNameOfTask(targetTask) {
+  //   return this.http.patch(this.tasksUrs + `/${targetTask.id}`, {
+  //     name: targetTask.name,
+  //     done: targetTask.done,
+  //     listId: targetTask.listId
+  //   });
+  // }
+
+  // markTask(targetTask) {
+  //   return this.http.patch(this.tasksUrs + `/${targetTask.id}`, {
+  //     name: targetTask.name,
+  //     done: targetTask.done,
+  //     listId: targetTask.listId
+  //   });
+  // }
 
 }

@@ -93,7 +93,7 @@ export class TodolistComponent implements OnInit {
 
   markTask(targetTask) {
     this.todolistsService
-      .markTask(targetTask)
+      .changeTaskFields(targetTask)
       .subscribe(resp => {
         this.tasks.forEach(task => {
           if (task.id === targetTask.id) {
@@ -105,7 +105,7 @@ export class TodolistComponent implements OnInit {
 
   changeTaskName(targetTask) {
     this.todolistsService
-      .changeNameOfTask(targetTask)
+      .changeTaskFields(targetTask)
       .subscribe(resp => {
         this.tasks.forEach(task => {
           if (task.id === targetTask.id) {

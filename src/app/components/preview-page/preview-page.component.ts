@@ -16,29 +16,48 @@ export class PreviewPageComponent implements OnInit {
   ) { }
 
   lists;
-  undoneTasks;
+  // undoneTasks;
 
   ngOnInit() {
-    this.getListsAndTasks();
+    this.getListsAndUndoneTasks();
   }
 
-  getListsAndTasks() {
+  getListsAndUndoneTasks() {
+    // this.todolistsService
+    //   .getUndoneTasksFromSelectedList()
+    //   .subscribe(data => {
+    //     console.log('Undone tasks', data);
+    //   })
+
+    // this.todolistsService
+    //   .getLists()
+    //   .subscribe(res => {
+    //     this.lists = res;
+    //     this.sortListsByPinFirst();
+    //     this.todolistsService
+    //       .getUndoneTasksFromSelectedList()
+    //       .subscribe(res => {
+    //         this.undoneTasks = res;
+    //         this.lists.forEach(list => {
+    //           list.undoneTasks = this.undoneTasks.filter(task => task.listId === list.id);
+    //           console.log('Undone tasks', this.lists);
+    //         })
+    //       });
+    //   });
 
     this.todolistsService
-      .getLists()
-      .subscribe(res => {
-        this.lists = res;
-        this.sortListsByPinFirst();
+      .getUndoneTasksFromSelectedList()
+      .subscribe(undoneTasks => {
+        console.log('Undone tasks', undoneTasks);
         this.todolistsService
-          .getUndoneTasksFromSelectedList()
-          .subscribe(res => {
-            this.undoneTasks = res;
-            this.lists.forEach(list => {
-              list.undoneTasks = this.undoneTasks.filter(task => task.listId === list.id);
-              console.log('Undone tasks', this.lists);
-            })
-          });
-      });
+          .getLists()
+          .subscribe(lists => {
+            lists.forEach(list => list.undoneTasks = undoneTasks.filter(task => task.listId === list.id));
+            console.log('lists', lists);
+            this.lists = lists;
+            this.sortListsByPinFirst();
+          })
+      })
   }
 
 

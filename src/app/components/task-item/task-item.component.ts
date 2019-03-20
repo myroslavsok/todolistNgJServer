@@ -13,10 +13,12 @@ export class TaskItemComponent {
   @Output() OnDeleteTask = new EventEmitter<any>();
 
   markTaskAsDone() {
-    this.OnMarkTaskAsDone.emit({
-      id: this.newTask.id,
-      done: !this.newTask.done
-    });
+    // this.OnMarkTaskAsDone.emit({
+    //   id: this.newTask.id,
+    //   done: !this.newTask.done
+    // });
+    this.newTask.done = !this.newTask.done;
+    this.OnMarkTaskAsDone.emit(this.newTask);
   }
 
   editTask() {
@@ -24,10 +26,12 @@ export class TaskItemComponent {
     if (!newName || newName === this.newTask.name) {
       return;
     }
-    this.OnEditTask.emit({
-      id: this.newTask.id,
-      name: newName
-    });
+    // this.OnEditTask.emit({
+    //   id: this.newTask.id,
+    //   name: newName
+    // });
+    this.newTask.name = newName;
+    this.OnEditTask.emit(this.newTask);
   }
 
   deleteTask() {
