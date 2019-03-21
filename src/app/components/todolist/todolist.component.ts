@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TodolistsService } from '../../shared/services/todolists.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
 
 @Component({
   selector: 'app-todolist',
@@ -87,7 +88,10 @@ export class TodolistComponent implements OnInit {
       .deleteList(targetList)
       .subscribe(resp => {
         this.lists = this.lists.filter(list => list.id !== targetList.id);
-        this.tasks = this.tasks.filter(task => task.listId !== targetList.id);
+        this.tasks = [];
+        if (!this.lists.lenght) {
+          return this.selectedListId = 0;
+        }
       });
   }
 
