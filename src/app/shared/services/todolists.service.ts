@@ -39,10 +39,6 @@ export class TodolistsService {
     return this.http.get(this.tasksUrs + `/list/${selectedListId}`);
   }
 
-  getUndoneTasksFromSelectedList() {
-    return this.http.get(this.tasksUrs + `/false`);
-  }
-
   addTaskToselectedList(body) {
     return this.http.post(this.tasksUrs, {
       listId: body.listId,

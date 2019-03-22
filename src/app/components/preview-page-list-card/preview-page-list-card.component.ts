@@ -1,5 +1,4 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-preview-page-list-card',
@@ -7,15 +6,6 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./preview-page-list-card.component.scss']
 })
 export class PreviewPageListCardComponent implements OnInit {
-  
-  // private _asynDataThisList = new BehaviorSubject<any>([]);
-  // @Input()
-  // set thisList(value) {
-  //     this._asynDataThisList.next(value);
-  // };
-  // get thisList() {
-  //     return this._asynDataThisList.getValue();
-  // }
 
   @Input() thisList;
 
@@ -30,14 +20,6 @@ export class PreviewPageListCardComponent implements OnInit {
   filterThisListForUndoneTasks() {
     console.log("list-item", this.thisList);
     this.thisList.tasks = this.sortListTasksForFiveUndone(this.thisList.tasks);
-    
-
-    // this._asynDataThisList
-    //   .subscribe(list => {
-    //     console.log("list-item", list);
-    //     // let tasks = list.undoneTasks;
-    //     // this.thisList.undoneTasks = this.sortListTasksForFiveUndone(tasks);
-    //   });
   }
 
   sortListTasksForFiveUndone(tasks) {
