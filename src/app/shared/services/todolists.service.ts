@@ -51,10 +51,10 @@ export class TodolistsService {
     return this.http.delete(this.tasksUrs + `/${targetTaskId}`);
   }
 
-
   changeTaskFields(targetTask) {
     console.log('change sevice', targetTask);
-    return this.http.patch(this.tasksUrs + `/${targetTask.id}`, {
+    return this.http.patch(this.tasksUrs, {
+      id: targetTask.id,
       name: targetTask.name,
       done: targetTask.done,
       listId: targetTask.listId
