@@ -1,0 +1,7 @@
+<div class="list__card" [class.is__pinned]="thisList.pin">
+    <span (click)="pinList()" class="pin__btn" [class.is__pinned__btn]="thisList.pin">✔</span>
+    <h3 class="list__name">{{ thisList.name }}</h3>
+    <ul *ngIf="thisList" class="tasks__container">
+      <li *ngFor="let task of thisList.tasks" class="task__name">{{ task.name }}</li>
+    </ul>
+</div> 

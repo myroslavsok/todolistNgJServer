@@ -1,0 +1,64 @@
+.is__pinned {
+    border-color: #0d47a1 !important;
+    background-color: #bbdefb;
+}
+
+.is__pinned__btn {
+    visibility: visible !important;
+}
+
+.pin__btn {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+    padding: 5px;
+    transform: translateX(50%) translateY(-50%);
+    font-weight: bold;
+    font-style: 15px;
+    border-radius: 50%;
+    color: #0d47a1;
+    background-color: white;
+    border: 2px solid #0d47a1;
+    visibility: hidden;
+}
+
+.list__card {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 265px;
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.list__card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.list__card:hover .pin__btn {
+    visibility: visible;
+}
+
+
+.tasks__container {
+    list-style: none;
+    padding: 0;
+}
+
+.task__name {
+    margin: 5px 10px;
+    padding: 5px 10px;
+}
+
+.task__name:nth-child(6) {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-align: center;
+}

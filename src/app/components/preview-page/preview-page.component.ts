@@ -14,25 +14,24 @@ export class PreviewPageComponent implements OnInit {
     private route: Router
   ) { }
 
-  lists;
+  lists = [];
 
   ngOnInit() {
-    this.addUndoneTasksToAppropriateLists();
+    this.getListsWithUndoneTasks();
   }
 
-  addUndoneTasksToAppropriateLists() {
+  getListsWithUndoneTasks() {
     this.todolistsService
-      .getUndoneTasksFromSelectedList()
-      .subscribe(undoneTasks => {
-        this.todolistsService
-          .getLists()
-          .subscribe(lists => {
-            lists.forEach(list => list.undoneTasks = undoneTasks.filter(task => task.listId === list.id));            
-            this.lists = lists;
-            this.sortListsByPinFirst();
-          })
-      })
-  }
+      .getLists()
+      .subscribe((lists: any) => {
+        this.lists = lists.map(list => {
+          list.tasks = list.tasks.filter(task => !task.done);
+          return list;
+        });
+        this.sortListsByPinFirst();
+        console.log("lists", this.lists);          
+      });
+  }  
 
   pinList(targetList) {
     this.sortListsByPinFirst();
